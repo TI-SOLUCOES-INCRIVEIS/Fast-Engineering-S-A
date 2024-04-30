@@ -58,7 +58,7 @@ A arquitetura proposta segue as melhores práticas e está de acordo com os pila
     
   **Pilares da AWS Well-Architected Framework**
       
-![Pilares Well-Architected](Pilares do AWS Well-Architected)
+![Pilares Well-Architected](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/Pilares%20do%20AWS%20Well-Architected.png)
   
   **Migração de Dados**
   
