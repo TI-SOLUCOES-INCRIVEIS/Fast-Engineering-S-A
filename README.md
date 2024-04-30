@@ -1,7 +1,7 @@
 [![en](https://img.shields.io/badge/lang-en-green.svg)](https://github.com/zSalocin/PB_Compass_Projeto_Final_Arquitetura/blob/main/README.md)   [![pt-br](https://img.shields.io/badge/lang-pt--br-red.svg)](https://github.com/zSalocin/PB_Compass_Projeto_Final_Arquitetura/blob/main/README_PT-BR.md)
 
-# Cloud: Projeto-final-do-PB
-Programa de Bolsas - AWS e DevSecOps | Compass UOL
+# Projeto final - Cloud AWS
+Documentação do projeto Final do Programa de Bolsas - AWS e DevSecOps | Compass UOL
 
 #### Membros da Equipe:
 - [Gustavo Pinheiro](https://github.com/Gustavopnhro)
