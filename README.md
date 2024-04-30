@@ -1,5 +1,3 @@
-[![en](https://img.shields.io/badge/lang-en-green.svg)](https://github.com/zSalocin/PB_Compass_Projeto_Final_Arquitetura/blob/main/README.md)   [![pt-br](https://img.shields.io/badge/lang-pt--br-red.svg)](https://github.com/zSalocin/PB_Compass_Projeto_Final_Arquitetura/blob/main/README_PT-BR.md)
-
 # Projeto final - Cloud AWS
 Documentação do projeto Final do Programa de Bolsas - AWS e DevSecOps | Compass UOL
 
@@ -52,7 +50,7 @@ A motivação por trás desta migração é a necessidade de atender à crescent
 
 ### Avaliação da Infraestrutura Atual.
 
-![Arquitetura_Atual](https://github.com/zSalocin/PB_Compass_Projeto_Final_Arquitetura/blob/main/Assets/Arquitetura_Atual.png)
+![Arquitetura_Atual](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/Arquitetura%20atual.png)
 
 ### Arquitetura da Solução Proposta:
 
