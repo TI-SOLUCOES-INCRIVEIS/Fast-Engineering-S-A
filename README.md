@@ -1,12 +1,12 @@
 [![en](https://img.shields.io/badge/lang-en-green.svg)](https://github.com/zSalocin/PB_Compass_Projeto_Final_Arquitetura/blob/main/README.md)   [![pt-br](https://img.shields.io/badge/lang-pt--br-red.svg)](https://github.com/zSalocin/PB_Compass_Projeto_Final_Arquitetura/blob/main/README_PT-BR.md)
 
 # Cloud: Projeto-final-do-PB
-AWS - Cloud Pratictioner - PB Aws - IF Fluminense - IFMT - UTFPR - UNAMA  | Programa de Bolsas - DevSecOps
+Programa de Bolsas - AWS e DevSecOps | Compass UOL
 
 #### Membros da Equipe:
-- [Bruno Garcia Nazareth](https://github.com/brunoshure)
-- [Nicolas Meirelles Grisostolo](https://github.com/zSalocin)
-- [Raphael Antunes Marinho de Souza](https://github.com/RaphaelAntunesMarinhoDeSouza)
+- [Gustavo Pinheiro](https://github.com/Gustavopnhro)
+- [Janaina Cordisco](https://github.com/JanainaACordisco)
+- [Patrícia Moura](https://github.com/Tri3010)
 
 ### Caso:
 A "Fast Engineering S/A" está em busca de uma solução por parte da empresa terceira "TI SOLUÇÕES INCRÍVEIS". O eCommerce da Fast Engineering está experimentando um crescimento significativo e a solução atual não está mais conseguindo lidar com a alta demanda de acessos e compras que está enfrentando. Desde o início do ano, os acessos e as compras têm apresentado um aumento de 20% a cada mês.
