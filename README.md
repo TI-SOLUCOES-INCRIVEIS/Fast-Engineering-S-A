@@ -58,7 +58,7 @@ A arquitetura proposta segue as melhores práticas e está de acordo com os pila
     
   **Pilares da AWS Well-Architected Framework**
       
-![Arquitetura_Atual](https://github.com/zSalocin/PB_Compass_Projeto_Final_Arquitetura/blob/main/Assets/Pilares.png)
+![Pilares Well-Architected](Pilares do AWS Well-Architected)
   
   **Migração de Dados**
   
