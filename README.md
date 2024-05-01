@@ -1,5 +1,5 @@
 # Projeto final - Cloud AWS
-Documentação do projeto Final do Programa de Bolsas - AWS e DevSecOps | Compass UOL
+Documentação do projeto final do Programa de Bolsas - AWS e DevSecOps | Compass UOL
 
 #### Membros da Equipe:
 - [Gustavo Pinheiro](https://github.com/Gustavopnhro)
@@ -10,7 +10,7 @@ Documentação do projeto Final do Programa de Bolsas - AWS e DevSecOps | Compas
 A "Fast Engineering S/A" está em busca de uma solução por parte da empresa terceira "TI SOLUÇÕES INCRÍVEIS". O eCommerce da Fast Engineering está experimentando um crescimento significativo e a solução atual não está mais conseguindo lidar com a alta demanda de acessos e compras que está enfrentando. Desde o início do ano, os acessos e as compras têm apresentado um aumento de 20% a cada mês.
 
 **Arquitetura Atual**
-* 01 servidor para Banco de Dados Mysql;
+* 01 servidor para Banco de Dados MySQL;
 * 01 servidor para a aplicação utilizando REACT;
 * 01 servidor de web Server e que armazena estáticos como fotos e links.
 
