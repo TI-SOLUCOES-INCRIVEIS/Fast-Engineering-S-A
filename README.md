@@ -56,48 +56,51 @@ A motivação por trás desta migração é a necessidade de atender à crescent
 
 A arquitetura proposta segue as melhores práticas e está de acordo com os pilares da AWS Well-Architected Framework.
     
-  **Pilares da AWS Well-Architected Framework**
+ ### Pilares da AWS Well-Architected Framework
       
 ![Pilares Well-Architected](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/Pilares%20do%20AWS%20Well-Architected.png)
   
-  **Migração de Dados**
+  ### Migração de Dados
   
- A equipe está implementando uma migração de banco de dados crucial para o AWS RDS, adotando uma abordagem que prioriza a eficiência e a continuidade operacional. O AWS Database Migration Service (DMS) será utilizado para assegurar uma transição suave, replicando os dados de forma contínua e mantendo sua integridade. Essa estratégia tem como objetivo minimizar qualquer impacto nas operações diárias, ao mesmo tempo em que se aproveita os benefícios da escalabilidade e segurança oferecidos pela AWS. A equipe está comprometida em garantir que essa migração se concretize como uma transição tranquila e bem-sucedida.
+A equipe está implementando uma migração de banco de dados crucial para o AWS RDS, adotando uma abordagem que prioriza a eficiência e a continuidade operacional. O AWS Database Migration Service (DMS) será utilizado para assegurar uma transição suave, replicando os dados de forma contínua e mantendo sua integridade. Essa estratégia tem como objetivo minimizar qualquer impacto nas operações diárias, ao mesmo tempo em que se aproveita os benefícios da escalabilidade e segurança oferecidos pela AWS. A equipe está comprometida em garantir que essa migração se concretize como uma transição tranquila e bem-sucedida.
   
-  **Serviços Utilizados**
-  
-- **Amazon CloudFront**
-  O Amazon CloudFront é um serviço de Content Delivery Network (CDN) oferecido pela Amazon Web Services (AWS). Sua principal função é acelerar a entrega de conteúdo estático e dinâmico, como páginas web, imagens, vídeos, scripts e outros arquivos multimídia, aos usuários finais com baixa latência e alta disponibilidade.
-  
-- **AWS Web Application Firewall (WAF)**
-  - O AWS Web Application Firewall é um serviço de firewall projetado para proteger aplicações web contra ataques comuns, proporcionando proteção avançada contra ameaças, garantindo a segurança de aplicativos da web.
+  ### Serviços Utilizados
 
-- **AWS Shield**
-  - O AWS Shield é um serviço de segurança que protege aplicativos e recursos da AWS contra ataques DDoS (Distributed Denial of Service), fornecendo defesa contra ataques DDoS de alto nível para manter a disponibilidade dos recursos.
+- **AWS Database Migration Service**
+  - O AWS Database Migration Service facilita a migração de bancos de dados para a AWS com segurança e facilidade.
 
 - **Amazon Route 53**
   - O Amazon Route 53 é um serviço DNS que permite registrar e gerenciar domínios, com roteamento de tráfego para recursos AWS, como ELB e CloudFront. Facilita o roteamento de tráfego eficiente e garante alta disponibilidade, direcionando acessos para instâncias e serviços AWS.
 
-- **Amazon Simple Storage Service (S3)**
-  - O Amazon S3 utiliza Buckets para armazenar e distribuir conteúdo estático, incluindo imagens, vídeos e arquivos, integrando-se ao CloudFront para uma entrega eficiente. Oferece armazenamento seguro e escalável para imagens, vídeos e arquivos.
-
-- **Amazon EKS**
-  - O Elastic Kubernetes Service atua como a base da arquitetura, oferecendo orquestração de contêineres por meio do Kubernetes. Proporciona orquestração de contêineres escalável, permitindo a expansão dinâmica e alta disponibilidade da aplicação.
+- **AWS Web Application Firewall (WAF)**
+  - O AWS Web Application Firewall é um serviço de firewall projetado para proteger aplicações web contra ataques comuns, proporcionando proteção avançada contra ameaças, garantindo a segurança de aplicativos da web.
+  
+- **Amazon CloudFront**
+  - O Amazon CloudFront é um serviço de Content Delivery Network (CDN) oferecido pela Amazon Web Services (AWS). Sua principal função é acelerar a entrega de conteúdo estático e dinâmico, como páginas web, imagens, vídeos, scripts e outros arquivos multimídia, aos usuários finais com baixa latência e alta disponibilidade.
 
 - **Amazon Virtual Private Cloud (VPC)**
   - O Virtual Private Cloud isola a infraestrutura na nuvem e fornece controle granular sobre a rede, criando uma rede privada virtual. Cria uma rede VPC, melhorando o controle de tráfego e a segurança da infraestrutura.
 
-- **Amazon RDS** 
-  -O Amazon RDS (Relational Database Service) é um serviço de banco de dados relacional oferecido pela Amazon Web Services (AWS). Ele foi projetado para simplificar a administração, operação e escalabilidade de bancos de dados relacionais, permitindo que os desenvolvedores se concentrem em suas aplicações sem se preocupar com a gestão do banco de dados subjacente.
+ - **Application Load Balancer**
+   - O Application Load Balancer é um serviço que distribui o tráfego entre várias instâncias ou recursos para garantir a alta disponibilidade e a escalabilidade de aplicativos. 
 
-- **Elastic Load Balancing**
-  - O Elastic Load Balancing é um serviço que distribui o tráfego entre várias instâncias ou recursos para garantir a alta disponibilidade e a escalabilidade de aplicativos.
+- **Amazon EKS**
+  - O Elastic Kubernetes Service atua como a base da arquitetura, oferecendo orquestração de contêineres por meio do Kubernetes. Proporciona orquestração de contêineres escalável, permitindo a expansão dinâmica e alta disponibilidade da aplicação.
+
+- **Amazon EC2**
+  - O Amazon EC2 fornece instâncias virtuais sob demanda com configuração personalizável para uma ampla variedade de cargas de trabalho. Escalabilidade sob demanda, permitindo a adaptação rápida às necessidades de computação, sem investimentos antecipados em hardware físico.
+
+- **Amazon RDS MySQL** 
+  - O Amazon RDS (Relational Database Service) é um serviço de banco de dados relacional oferecido pela Amazon Web Services (AWS). Ele foi projetado para simplificar a administração, operação e escalabilidade de bancos de dados relacionais, permitindo que os desenvolvedores se concentrem em suas aplicações sem se preocupar com a gestão do banco de dados subjacente.
+
+- **Amazon Simple Storage Service (S3)**
+  - O Amazon S3 utiliza Buckets para armazenar e distribuir conteúdo estático, incluindo imagens, vídeos e arquivos, integrando-se ao CloudFront para uma entrega eficiente. Oferece armazenamento seguro e escalável para imagens, vídeos e arquivos.
 
 - **Amazon CloudWatch**
   - O Amazon CloudWatch é um serviço de monitoramento e observação que fornece insights sobre o desempenho dos recursos e aplicativos AWS.
-
-- **AWS Database Migration Service**
-  - O AWS Database Migration Service facilita a migração de bancos de dados para a AWS com segurança e facilidade.
+ 
+- **AWS Backup**
+  - O AWS Backup é um serviço de backup totalmente gerenciado que ajuda a simplificar a proteção de dados e a recuperação de recursos da AWS.
 
 - **AWS CodeBuild**
   - O AWS CodeBuild é um serviço de compilação totalmente gerenciado que compila código fonte, executa testes e cria artefatos.
@@ -108,14 +111,9 @@ A arquitetura proposta segue as melhores práticas e está de acordo com os pila
 - **AWS CodeDeploy**
   - O AWS CodeDeploy é um serviço de implantação automatizada que facilita a implantação de aplicativos na AWS.
 
-- **Amazon EC2**
-  - O Amazon EC2 fornece instâncias virtuais sob demanda com configuração personalizável para uma ampla variedade de cargas de trabalho. Escalabilidade sob demanda, permitindo a adaptação rápida às necessidades de computação, sem investimentos antecipados em hardware físico.
-
-- **AWS Backup**
-  - O AWS Backup é um serviço de backup totalmente gerenciado que ajuda a simplificar a proteção de dados e a recuperação de recursos da AWS.
-
 - **CloudFormation**
   - O AWS CloudFormation é um serviço que permite criar e gerenciar recursos da AWS por meio de modelos de infraestrutura como código.
+
  
   **Nova Arquitetura**
   
@@ -123,19 +121,15 @@ A arquitetura proposta segue as melhores práticas e está de acordo com os pila
 
 ### Valores
 
-**Calculadora AWS** 
-
-Acesso a [caluladora de preços da AWS](https://calculator.aws/#/)
-
-[Estimativa da Nova Arquitetura](https://calculator.aws/#/estimate?id=f0691a4bdf6209114ce6b6391e274d6b089bec07)
+[Estimativa da Nova Arquitetura](https://calculator.aws/#/estimate?id=ac4b05484def49f1053d80b5c2167dfc62498e20)
 
 **Custos**
 
 |             Item                   |                     Descrição                      |       Preço      |
 |------------------------------------|----------------------------------------------------|----------------  |
-| Migração Para a AWS                | Migração de dados on-premise para a AWS            | $496,40          |
-| Infraestrutura da AWS              | Custo da Infraestrutura de serviços da AWS         | $4.859,38/Mensal |
-| Custo da Equipe                    | Suporte e manutenção técnica                       | $3.457,76/Mensal |
+| Migração Para a AWS                | Migração de dados on-premise para a AWS            | $923,82          |
+| Infraestrutura da AWS              | Custo da Infraestrutura de serviços da AWS         | $/Mensal |
+| Custo da Equipe                    | Suporte e manutenção técnica                       | $/Mensal |
 
 ### Prazo de Entrega
 
