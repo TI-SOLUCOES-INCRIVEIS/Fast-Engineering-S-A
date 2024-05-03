@@ -1,5 +1,6 @@
-# Projeto final - Cloud AWS
-Documentação do projeto final do Programa de Bolsas - AWS e DevSecOps | Compass UOL
+# Projeto de Migração para a AWS - Fast Engineering S/A
+#### Este repositório contém a documentação do projeto final do Programa de Bolsas - AWS e DevSecOps | Compass UOL.
+O projeto tem como objetivo aumentar a escalabilidade e reduzir custos operacionais com a migração para a AWS Cloud de um e-commerce.
 
 #### Membros da Equipe:
 - [Gustavo Pinheiro](https://github.com/Gustavopnhro)
@@ -7,12 +8,8 @@ Documentação do projeto final do Programa de Bolsas - AWS e DevSecOps | Compas
 - [Patrícia Moura](https://github.com/Tri3010)
 
 ### Caso:
-A "Fast Engineering S/A" está em busca de uma solução por parte da empresa terceira "TI SOLUÇÕES INCRÍVEIS". O eCommerce da Fast Engineering está experimentando um crescimento significativo e a solução atual não está mais conseguindo lidar com a alta demanda de acessos e compras que está enfrentando. Desde o início do ano, os acessos e as compras têm apresentado um aumento de 20% a cada mês.
-
-**Arquitetura Atual**
-* 01 servidor para Banco de Dados MySQL;
-* 01 servidor para a aplicação utilizando REACT;
-* 01 servidor de web Server e que armazena estáticos como fotos e links.
+A "Fast Engineering S/A" está em busca de uma solução por parte da empresa terceira "TI SOLUÇÕES INCRÍVEIS". O eCommerce da Fast Engineering está experimentando um crescimento significativo e a solução atual não está mais conseguindo lidar com a alta demanda de acessos e compras que está enfrentando. Desde o início do ano, os acessos e as compras têm apresentado um aumento de 20% a cada mês.  
+Neste contexto, a Fast Engineering S/A têm buscado formas de aumentar a disponibilidade, segurança, lidar com o aumento da demanda e reduzir custo com infraestrutura e gerenciamento de suas instalações do eCommerce. 
 
 **Requerimentos do Pedido**
 - Escopo.
@@ -21,7 +18,7 @@ A "Fast Engineering S/A" está em busca de uma solução por parte da empresa te
 - Prazo de Entrega.
 - Cronograma Macro de Entregas.
 
-Sobre a construção da arquitetura para o futuro website da nossa empresa, é necessario seguir as melhores práticas DevOps.
+Sobre a construção da arquitetura para o futuro website da empresa, é necessario seguir as melhores práticas DevOps.
 
 **Requesitos da Nova Arquitetura**
 - Ambiente Kubernetes.
@@ -31,35 +28,81 @@ Sobre a construção da arquitetura para o futuro website da nossa empresa, é n
 - Persistência dos dados.
 - Balanceamento de carga com healthcheck.
 - Segurança (liberar somente o necessário/mínimo acesso possível).
-  
-Objetivo: Monte a proposta e a arquitetura do que a equipe propõe entregar.
 
-___
+## Escopo do projeto
+### Arquitetura atual.
 
-## Projeto de Migração para a AWS - Fast Engineering S/A
+A empresa opera com uma infraestrutura composta por três servidores principais: um para banco de dados MySQL (armazenando dados da aplicação React), outro para execução da aplicação React e um terceiro para servidor web, armazenamento e entrega de arquivos estáticos.
 
-## Introdução
-
-Este repositório contém a documentação e o escopo do projeto de migração para a AWS de um e-commerce. O projeto tem como objetivo aumentar a escalabilidade e reduzir custos operacionais.
-
-## Motivação do Cliente
-
-A motivação por trás desta migração é a necessidade de atender à crescente demanda de acessos e compras que a Fast Engineering S/A está enfrentando.
-
-## Escopo do Projeto
-
-### Avaliação da Infraestrutura Atual.
+Embora funcional para a operação básica da aplicação, recomenda-se aprimorar aspectos como segurança, monitoramento, alta disponibilidade e automação, visando garantir o crescimento sustentável, a escalabilidade e o desempenho da plataforma.
 
 ![Arquitetura_Atual](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Arquitetura%20atual.png)
 
-### Arquitetura da Solução Proposta:
+### Arquitetura da solução proposta:
 
 A arquitetura proposta segue as melhores práticas e está de acordo com os pilares da AWS Well-Architected Framework.
-    
- ### Pilares da AWS Well-Architected Framework
-      
+         
 ![Pilares Well-Architected](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Pilares%20do%20AWS%20Well-Architected.png)
   
+**Excelência Operacional:** 
+
+- A distribuição de recursos em várias zonas de disponibilidade aumenta a resiliência e a disponibilidade do sistema. 
+
+- O uso de métricas e alarmes no Amazon CloudWatch permite monitorar continuamente a saúde e o desempenho do sistema, facilitando a identificação e correção de problemas operacionais. 
+
+**Segurança:**
+
+- A configuração do AWS WAF protege contra ataques da web comuns, como injeções SQL e cross-site scripting (XSS). 
+
+- A segregação de subnets públicas e privadas, juntamente com a configuração adequada de grupos de segurança e ACLs de rede, ajuda a garantir que os recursos estejam protegidos contra acesso não autorizado. 
+
+**Confiabilidade:** 
+
+- A presença de instâncias do Amazon RDS MySQL standby em cada zona de disponibilidade ajuda a garantir alta disponibilidade e recuperação rápida em caso de falha do banco de dados primário. 
+
+- O uso de múltiplos NAT Gateways distribuídos em várias zonas de disponibilidade aumenta a resiliência do sistema, garantindo que o tráfego de saída continue fluindo mesmo em caso de falha em uma zona. 
+ 
+**Eficiência de Desempenho:**
+
+- O uso do Amazon CloudFront para distribuir conteúdo estático e otimizar a entrega de frontend e APIs melhora o desempenho do sistema, reduzindo a latência e melhorando a experiência do usuário. 
+
+- Distribuir tráfego de saída entre vários NAT Gateways e usar instâncias do Amazon RDS SQL Server standby para backups e recuperação de desastres otimiza os custos operacionais e melhora a eficiência do sistema. 
+
+**Custo Otimizado:** 
+
+- Distribuir tráfego de saída entre vários NAT Gateways e usar instâncias do Amazon RDS SQL Server standby para backups e recuperação de desastres são práticas que podem ajudar a otimizar os custos operacionais e reduzir desperdícios. 
+  
+**Operações:**
+
+- O uso de automação para provisionamento e gerenciamento de recursos, juntamente com a implementação de práticas de DevOps, ajuda a simplificar e acelerar as operações do sistema, permitindo uma entrega mais rápida e confiável de novas funcionalidades.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+   # 
   ### Migração de Dados
   
 A equipe está implementando uma migração de banco de dados crucial para o AWS RDS, adotando uma abordagem que prioriza a eficiência e a continuidade operacional. O AWS Database Migration Service (DMS) será utilizado para assegurar uma transição suave, replicando os dados de forma contínua e mantendo sua integridade. Essa estratégia tem como objetivo minimizar qualquer impacto nas operações diárias, ao mesmo tempo em que se aproveita os benefícios da escalabilidade e segurança oferecidos pela AWS. A equipe está comprometida em garantir que essa migração se concretize como uma transição tranquila e bem-sucedida.
