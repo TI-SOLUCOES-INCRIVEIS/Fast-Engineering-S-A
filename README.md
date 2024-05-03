@@ -30,7 +30,7 @@ Sobre a construção da arquitetura para o futuro website da empresa, é necessa
 - Segurança (liberar somente o necessário/mínimo acesso possível).
 
 ## Escopo do projeto
-### Arquitetura atual.
+### Arquitetura atual
 
 A empresa opera com uma infraestrutura composta por três servidores principais: um para banco de dados MySQL (armazenando dados da aplicação React), outro para execução da aplicação React e um terceiro para servidor web, armazenamento e entrega de arquivos estáticos.
 
@@ -38,76 +38,13 @@ Embora funcional para a operação básica da aplicação, recomenda-se aprimora
 
 ![Arquitetura_Atual](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Arquitetura%20atual.png)
 
-### Arquitetura da solução proposta:
+### Arquitetura da solução proposta
 
-A arquitetura proposta segue as melhores práticas e está de acordo com os pilares da AWS Well-Architected Framework.
-         
-![Pilares Well-Architected](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Pilares%20do%20AWS%20Well-Architected.png)
-  
-**Excelência Operacional:** 
+Quando planejamos a implantação na AWS, podemos nos beneficiar com a adoção de serviços gerenciados que reduzem o esforço de tarefas operacionais que não agregam valor à estrutura da empresa, e nos permitem focar em melhorias dos serviços prestados aos clientes. Dessa forma, precisamos investir menos esforço para manter a infraestrutura e mais em entregar novas funcionalidades, garantindo que a aplicação se comporte de acordo com a expectativa dos usuários finais.
 
-- A distribuição de recursos em várias zonas de disponibilidade aumenta a resiliência e a disponibilidade do sistema. 
+![PROJECT_ARCHITECTURE](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Arquitetura%20final.png)
 
-- O uso de métricas e alarmes no Amazon CloudWatch permite monitorar continuamente a saúde e o desempenho do sistema, facilitando a identificação e correção de problemas operacionais. 
-
-**Segurança:**
-
-- A configuração do AWS WAF protege contra ataques da web comuns, como injeções SQL e cross-site scripting (XSS). 
-
-- A segregação de subnets públicas e privadas, juntamente com a configuração adequada de grupos de segurança e ACLs de rede, ajuda a garantir que os recursos estejam protegidos contra acesso não autorizado. 
-
-**Confiabilidade:** 
-
-- A presença de instâncias do Amazon RDS MySQL standby em cada zona de disponibilidade ajuda a garantir alta disponibilidade e recuperação rápida em caso de falha do banco de dados primário. 
-
-- O uso de múltiplos NAT Gateways distribuídos em várias zonas de disponibilidade aumenta a resiliência do sistema, garantindo que o tráfego de saída continue fluindo mesmo em caso de falha em uma zona. 
- 
-**Eficiência de Desempenho:**
-
-- O uso do Amazon CloudFront para distribuir conteúdo estático e otimizar a entrega de frontend e APIs melhora o desempenho do sistema, reduzindo a latência e melhorando a experiência do usuário. 
-
-- Distribuir tráfego de saída entre vários NAT Gateways e usar instâncias do Amazon RDS SQL Server standby para backups e recuperação de desastres otimiza os custos operacionais e melhora a eficiência do sistema. 
-
-**Custo Otimizado:** 
-
-- Distribuir tráfego de saída entre vários NAT Gateways e usar instâncias do Amazon RDS SQL Server standby para backups e recuperação de desastres são práticas que podem ajudar a otimizar os custos operacionais e reduzir desperdícios. 
-  
-**Operações:**
-
-- O uso de automação para provisionamento e gerenciamento de recursos, juntamente com a implementação de práticas de DevOps, ajuda a simplificar e acelerar as operações do sistema, permitindo uma entrega mais rápida e confiável de novas funcionalidades.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-   # 
-  ### Migração de Dados
-  
-A equipe está implementando uma migração de banco de dados crucial para o AWS RDS, adotando uma abordagem que prioriza a eficiência e a continuidade operacional. O AWS Database Migration Service (DMS) será utilizado para assegurar uma transição suave, replicando os dados de forma contínua e mantendo sua integridade. Essa estratégia tem como objetivo minimizar qualquer impacto nas operações diárias, ao mesmo tempo em que se aproveita os benefícios da escalabilidade e segurança oferecidos pela AWS. A equipe está comprometida em garantir que essa migração se concretize como uma transição tranquila e bem-sucedida.
-  
-  ### Serviços Utilizados
+ ### Serviços Utilizados
 
 - **AWS Database Migration Service**
   - O AWS Database Migration Service facilita a migração de bancos de dados para a AWS com segurança e facilidade.
@@ -141,6 +78,95 @@ A equipe está implementando uma migração de banco de dados crucial para o AWS
 
 - **Amazon CloudWatch**
   - O Amazon CloudWatch é um serviço de monitoramento e observação que fornece insights sobre o desempenho dos recursos e aplicativos AWS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### AWS Well-Architected Framework
+
+A arquitetura proposta segue as melhores práticas e está de acordo com os pilares da AWS Well-Architected Framework.
+         
+![Pilares Well-Architected](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Pilares%20do%20AWS%20Well-Architected.png)
+  
+**Excelência Operacional:** 
+
+- A distribuição de recursos em várias zonas de disponibilidade aumenta a resiliência e a disponibilidade do sistema. 
+
+- O uso de métricas e alarmes no Amazon CloudWatch permite monitorar continuamente a saúde e o desempenho do sistema, facilitando a identificação e correção de problemas operacionais. 
+
+**Segurança:**
+
+- A configuração do AWS WAF protege contra ataques da web comuns, como injeções SQL e cross-site scripting (XSS). 
+
+- A segregação de subnets públicas e privadas, juntamente com a configuração adequada de grupos de segurança e ACLs de rede, ajuda a garantir que os recursos estejam protegidos contra acesso não autorizado.  
+
+**Confiabilidade:** 
+
+- As instâncias do EKS são distribuídas em várias Availability Zones dentro da mesma região da AWS, garantindo que a aplicação permaneça disponível em caso de falhas em uma zona.
+
+- Amazon RDS Multi-AZ: O banco de dados RDS é replicado automaticamente para uma Availability Zone secundária, garantindo a alta disponibilidade recuperação rápida em caso de falha do banco de dados primário. 
+
+- O uso de múltiplos NAT Gateways distribuídos em várias zonas de disponibilidade aumenta a resiliência do sistema, garantindo que o tráfego de saída continue fluindo mesmo em caso de falha em uma zona. 
+ 
+**Eficiência de Desempenho:**
+
+- O uso do Amazon CloudFront para distribuir conteúdo estático e otimizar a entrega de frontend e APIs melhora o desempenho do sistema, reduzindo a latência e melhorando a experiência do usuário. 
+
+- O Application Load Balancer o distribui o tráfego de forma inteligente entre várias instâncias do Amazon EKS, garantindo alta disponibilidade e desempenho.
+
+- Distribuir tráfego de saída entre vários NAT Gateways e usar instâncias do Amazon RDS MySQL standby para backups e recuperação de desastres otimiza os custos operacionais e melhora a eficiência do sistema. 
+
+**Custo Otimizado:** 
+
+- Uso Eficiente de Recursos: O dimensionamento automático e a escolha de tipos de serviços adequados garantem que você utilize apenas os recursos que precisa, otimizando os custos da AWS.
+
+- Monitoramento de Custos: O CloudWatch pode ser utilizado para monitorar os custos da infraestrutura e identificar oportunidades de otimização.
+  
+**Sustentabilidade:**
+
+- Eficiência Energética: O Fargate é uma plataforma serverless que utiliza apenas os recursos computacionais necessários para executar os containers, reduzindo o consumo de energia.
+
+- Práticas Sustentáveis: A AWS oferece diversas práticas sustentáveis para reduzir o impacto ambiental da infraestrutura, como a utilização de fontes renováveis de energia e a otimização da refrigeração de data centers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+   # 
+  ### Migração de Dados
+  
+A equipe está implementando uma migração de banco de dados crucial para o AWS RDS, adotando uma abordagem que prioriza a eficiência e a continuidade operacional. O AWS Database Migration Service (DMS) será utilizado para assegurar uma transição suave, replicando os dados de forma contínua e mantendo sua integridade. Essa estratégia tem como objetivo minimizar qualquer impacto nas operações diárias, ao mesmo tempo em que se aproveita os benefícios da escalabilidade e segurança oferecidos pela AWS. A equipe está comprometida em garantir que essa migração se concretize como uma transição tranquila e bem-sucedida.
+  
+ 
  
 - **AWS Backup**
   - O AWS Backup é um serviço de backup totalmente gerenciado que ajuda a simplificar a proteção de dados e a recuperação de recursos da AWS.
@@ -157,10 +183,7 @@ A equipe está implementando uma migração de banco de dados crucial para o AWS
 - **CloudFormation**
   - O AWS CloudFormation é um serviço que permite criar e gerenciar recursos da AWS por meio de modelos de infraestrutura como código.
 
- 
-  **Nova Arquitetura**
-  
-![PROJECT_ARCHITECTURE](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Arquitetura%20final.png)
+
 
 ### Valores
 
