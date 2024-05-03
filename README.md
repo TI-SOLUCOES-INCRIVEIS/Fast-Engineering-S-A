@@ -50,7 +50,7 @@ A motivação por trás desta migração é a necessidade de atender à crescent
 
 ### Avaliação da Infraestrutura Atual.
 
-![Arquitetura_Atual](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/Arquitetura%20atual.png)
+![Arquitetura_Atual](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Arquitetura%20atual.png)
 
 ### Arquitetura da Solução Proposta:
 
@@ -117,7 +117,7 @@ A equipe está implementando uma migração de banco de dados crucial para o AWS
  
   **Nova Arquitetura**
   
-![PROJECT_ARCHITECTURE](https://github.com/zSalocin/PB_Compass_Projeto_Final_Arquitetura/blob/main/Assets/Arquitetura.jpeg)
+![PROJECT_ARCHITECTURE](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Arquitetura%20final.png)
 
 ### Valores
 
