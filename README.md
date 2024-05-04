@@ -188,13 +188,13 @@ A arquitetura proposta segue as melhores práticas e está de acordo com os pila
 
 |             Item             |                        Descrição                        |     Preço     |
 |:----------------------------:|:-------------------------------------------------------:|:-------------:|
-| Migração de dados para a AWS | Migração de dados on-premises para a AWS                |    $108,77    |
-| Mão de obra                  | Custo da equipe de projeto e implementação              |   $6.153,08   |
-| Infraestrutura da AWS        | Custo mensal da infraestrutura de serviços da AWS       |    $998,39    |
-| Treinamento                  | Treinamento da equipe da Fast Engineering S/A           |    $170,91    |
-| Suporte                      | Suporte mensal pós-implementação (10 horas/mês)         |    $355,02    |
-| **Custo único**              | **Total de custo único de implementação e treinamento** | **$6.432,76** |
-| **Custo mensal**             | **Total de custo mensal de infraestrutura e suporte**   | **$1.353,41** |
+| Migração de dados para a AWS | Migração de dados on-premises para a AWS.                |    $108,77    |
+| Mão de obra                  | Custo da equipe de projeto e implementação.              |   $6.153,08   |
+| Infraestrutura da AWS        | Custo mensal da infraestrutura de serviços da AWS.       |    $998,39    |
+| Treinamento                  | Treinamento da equipe da Fast Engineering S/A.           |    $170,91    |
+| Suporte                      | Suporte mensal pós-implementação (10 horas/mês).         |    $355,02    |
+| **Custo único**              | **Total de custo único de implementação e treinamento.** | **$6.432,76** |
+| **Custo mensal**             | **Total de custo mensal de infraestrutura e suporte.**   | **$1.353,41** |
 
 ## Cronograma Macro e Prazo de Entrega
 - Prazo total de entrega: 24 dias úteis.
