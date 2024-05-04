@@ -7,9 +7,9 @@ O projeto tem como objetivo aumentar a escalabilidade e reduzir custos operacion
 - [Janaina Cordisco](https://github.com/JanainaACordisco)
 - [Patrícia Moura](https://github.com/Tri3010)
 
-### Caso:
-A "Fast Engineering S/A" está em busca de uma solução por parte da empresa terceira "TI SOLUÇÕES INCRÍVEIS". O eCommerce da Fast Engineering está experimentando um crescimento significativo e a solução atual não está mais conseguindo lidar com a alta demanda de acessos e compras que está enfrentando. Desde o início do ano, os acessos e as compras têm apresentado um aumento de 20% a cada mês.  
-Neste contexto, a Fast Engineering S/A têm buscado formas de aumentar a disponibilidade, segurança, lidar com o aumento da demanda e reduzir custo com infraestrutura e gerenciamento de suas instalações do eCommerce. 
+### Caso
+A "Fast Engineering S/A" está em busca de uma solução por parte da empresa terceira "TI SOLUÇÕES INCRÍVEIS". O e-commerce da Fast Engineering está experimentando um crescimento significativo e a solução atual não está mais conseguindo lidar com a alta demanda de acessos e compras que está enfrentando. Desde o início do ano, os acessos e as compras têm apresentado um aumento de 20% a cada mês.  
+Neste contexto, a Fast Engineering S/A têm buscado formas de aumentar a disponibilidade, segurança, lidar com o aumento da demanda e reduzir custo com infraestrutura e gerenciamento de suas instalações do e-commerce. 
 
 **Requerimentos do Pedido**
 - Escopo.
@@ -20,7 +20,7 @@ Neste contexto, a Fast Engineering S/A têm buscado formas de aumentar a disponi
 
 Sobre a construção da arquitetura para o futuro website da empresa, é necessario seguir as melhores práticas DevOps.
 
-**Requesitos da Nova Arquitetura**
+**Requisitos da Nova Arquitetura**
 - Ambiente Kubernetes.
 - Banco de dados PaaS.
 - MultiAZ.
@@ -32,7 +32,7 @@ Sobre a construção da arquitetura para o futuro website da empresa, é necessa
 ## Escopo do projeto
 ### **Arquitetura atual**
 
-A empresa opera com uma infraestrutura composta por três servidores principais: um para banco de dados MySQL (armazenando dados da aplicação React), outro para execução da aplicação React e um terceiro para servidor web, armazenamento e entrega de arquivos estáticos.
+A empresa opera com uma infraestrutura composta por três servidores principais: um para banco de dados MySQL (armazenando dados da aplicação React), outro para execução da aplicação React e um terceiro para o servidor web, que também armazena e entrega os arquivos estáticos.
 
 Embora funcional para a operação básica da aplicação, recomenda-se aprimorar aspectos como segurança, monitoramento, alta disponibilidade e automação, visando garantir o crescimento sustentável, a escalabilidade e o desempenho da plataforma.
 
@@ -75,11 +75,11 @@ Application Load Balancer é um serviço que distribui o tráfego entre várias 
 
 #### Amazon EKS
 O Elastic Kubernetes Service atua como a base da arquitetura, oferecendo orquestração de contêineres por meio do Kubernetes. Proporciona orquestração de contêineres escalável, permitindo a expansão dinâmica e alta disponibilidade da aplicação.
-- Uso: O EKS é responsável pelo gerenciamento do ciclo de vida dos containers, incluindo provisionamento, escalonamento e reinicialização em caso de falhas.
+- Uso: O EKS é responsável pelo gerenciamento do ciclo de vida dos conteinêres, incluindo provisionamento, escalonamento e reinicialização em caso de falhas.
 
 #### Amazon Fargate
 O Amazon Fargate é um serviço de computação sem servidor da AWS projetado para executar contêineres. Ele permite que você execute aplicativos em contêineres sem precisar provisionar e gerenciar servidores, o que significa que você não precisa se preocupar com a infraestrutura subjacente.
-- Uso: Os containers do Fargate executam o backend da aplicação web e se comunicam com o banco de dados RDS MySQL para recuperar ou armazenar dados e retornam as respostas ao cliente.
+- Uso: Os conteinêres do Fargate executam o backend da aplicação web e se comunicam com o banco de dados RDS MySQL para recuperar ou armazenar dados e retornam as respostas ao cliente.
 
 #### Amazon RDS MySQL 
 O Amazon RDS é um serviço de banco de dados relacional oferecido pela AWS. Ele foi projetado para simplificar a administração, operação e escalabilidade de bancos de dados relacionais, permitindo que os desenvolvedores se concentrem em suas aplicações sem se preocupar com a gestão do banco de dados subjacente.
@@ -87,7 +87,7 @@ O Amazon RDS é um serviço de banco de dados relacional oferecido pela AWS. Ele
 
 #### NAT Gateway
 Um gateway NAT é um serviço de Network Address Translation (NAT – Conversão de endereços de rede). Você pode usar um gateway NAT para que as instâncias em uma sub-rede privada possam se conectar a serviços fora da VPC, mas os serviços externos não podem iniciar uma conexão com essas instâncias.
-- Uso: O NAT Gateway permite que os containers do Fargate nas subnets privadas se comuniquem com a internet e com outros serviços da AWS de forma segura.
+- Uso: O NAT Gateway permite que os conteinêres do Fargate nas subnets privadas se comuniquem com a internet e com outros serviços da AWS de forma segura.
 
 #### Network ACL
 A Network Access Control List é uma lista com camadas adicionais de segurança que controlam o tráfego de entrada e saída de sub-redes em sua VPC.
@@ -95,21 +95,21 @@ A Network Access Control List é uma lista com camadas adicionais de segurança 
 
 #### AWS IAM
 O AWS Identity and Access Management é um serviço que ajuda você a controlar o acesso aos recursos da AWS de forma segura. Com o IAM, é possível gerenciar, de maneira centralizada, permissões que controlam quais recursos da AWS os usuários poderão acessar. Você usa o IAM para controlar quem é autenticado (fez login) e autorizado (tem permissões) a usar os recursos.
-- Uso: A IAM Role dentro do Fargate assume um papel crucial na atribuição de permissões e no controle de acesso para os containers em execução. Ela funciona como uma identidade digital para os containers, permitindo que eles acessem recursos específicos da AWS e realizem tarefas necessárias para a sua operação, como por exemplo permitindo a conexão com o banco de dados RDS.
+- Uso: A IAM Role dentro do Fargate assume um papel crucial na atribuição de permissões e no controle de acesso para os conteinêres em execução. Ela funciona como uma identidade digital para os conteinêres, permitindo que eles acessem recursos específicos da AWS e realizem tarefas necessárias para a sua operação, como por exemplo permitindo a conexão com o banco de dados RDS.
 
 #### Amazon CloudWatch
 O Amazon CloudWatch é um serviço de monitoramento dos recursos da AWS e as aplicações executadas na AWS em tempo real. Você pode usar o CloudWatch para coletar e monitorar métricas, que são as variáveis que é possível medir para avaliar seus recursos e suas aplicações.
-- Uso: Monitora a infraestrutura e a aplicação, fornecendo insights sobre desempenho, segurança e eventos, permitindo a detecção e resolução rápida de problemas.
+- Uso: Monitora a infraestrutura e a aplicação, fornecendo insights sobre desempenho, segurança e eventos, permitindo a prevenção, detecção e resolução rápida de problemas.
 
 #### AWS Database Migration Service
 O AWS DMS é um serviço de replicação e migração gerenciado que ajuda a mover workloads analíticos e bancos de dados para a AWS rapidamente, de forma segura e com o mínimo possível de inatividade e zero perda de dados.
-- Uso: Permite migrar o dados de bancos de dados on-premises para bancos de dados na AWS.
+- Uso: Permite migrar os dados do banco de dados on-premises para a AWS.
 
 
 ### Migração dos dados
 
 Propomos a migração segura e eficiente do servidor MySQL on-premises para o Amazon RDS na nuvem utilizando o AWS Database Migration Service (DMS). O DMS garante replicação contínua dos dados durante a migração, assegurando integridade e consistência. 
-O DMS facilita o processo com uma interface amigável para configuração e gerenciamento, além de oferecer monitoramento completo da migração. Com o AWS DMS e o RDS, garantimos uma migração tranquila, segura e eficiente para a nuvem e ao mesmo tempo, será possível desfrutar de escalabilidade sob demanda, confiabilidade e segurança robustas, redução de custos e alto desempenho. 
+O DMS facilita o processo com uma interface amigável para configuração e gerenciamento, além de oferecer monitoramento completo da migração. Com o AWS DMS e o RDS, garantimos uma migração tranquila, segura e eficiente para a nuvem e ao mesmo tempo, será possível desfrutar de escalabilidade sob demanda, confiabilidade e segurança robusta, redução de custos e alto desempenho. 
 
 ### Implementação
 
@@ -139,78 +139,61 @@ A arquitetura proposta segue as melhores práticas e está de acordo com os pila
          
 ![Pilares Well-Architected](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Pilares%20do%20AWS%20Well-Architected.png)
   
-**Excelência Operacional:** 
+**Excelência Operacional** 
 
 - A distribuição de recursos em várias zonas de disponibilidade aumenta a resiliência e a disponibilidade do sistema. 
 
 - O uso de métricas e alarmes no Amazon CloudWatch permite monitorar continuamente a saúde e o desempenho do sistema, facilitando a identificação e correção de problemas operacionais. 
 
-**Segurança:**
+**Segurança**
 
-- A configuração do AWS WAF protege contra ataques da web comuns, como injeções SQL, cross-site scripting (XSS) e DDoS. 
+- A configuração do AWS WAF protege contra ataques comuns da web, como injeções SQL, cross-site scripting (XSS) e DDoS. 
 
 - A segregação de subnets públicas e privadas, juntamente com a configuração adequada de grupos de segurança e ACLs de rede, ajuda a garantir que os recursos estejam protegidos contra acesso não autorizado.  
 
-**Confiabilidade:** 
+**Confiabilidade** 
 
-- As instâncias do EKS são distribuídas em várias Availability Zones dentro da mesma região da AWS, garantindo que a aplicação permaneça disponível em caso de falhas em uma zona.
+- As instâncias do EKS são distribuídas em várias zonas de disponibilidade dentro da mesma região da AWS, garantindo que a aplicação permaneça disponível em caso de falhas em uma zona.
 
-- Amazon RDS Multi-AZ: O banco de dados RDS é replicado automaticamente para uma Availability Zone secundária, garantindo a alta disponibilidade e recuperação rápida em caso de falha do banco de dados primário. 
+- Amazon RDS Multi-AZ: O banco de dados RDS é replicado automaticamente para uma zona de disponibilidade secundária, garantindo a alta disponibilidade e recuperação rápida em caso de falha do banco de dados primário. 
 
 - Os health checks do Application Load Balancer garantem que apenas instâncias saudáveis recebam tráfego.
 
 - O uso de múltiplos NAT Gateways distribuídos em várias zonas de disponibilidade aumenta a resiliência do sistema, garantindo que o tráfego de saída continue fluindo mesmo em caso de falha em uma zona. 
  
-**Eficiência de Desempenho:**
+**Eficiência de Desempenho**
 
 - O uso do Amazon CloudFront para distribuir conteúdo estático e otimizar a entrega de frontend e APIs melhora o desempenho do sistema, reduzindo a latência e melhorando a experiência do usuário. 
 
 - O Application Load Balancer distribui o tráfego de forma inteligente entre várias instâncias do Amazon EKS, garantindo alta disponibilidade e desempenho.
 
-**Custo Otimizado:** 
+**Custo Otimizado** 
 
 - Uso eficiente de recursos: O dimensionamento automático e a escolha de tipos de serviços adequados garantem que você utilize apenas os recursos que precisa, otimizando os custos da AWS.
 
 - Monitoramento de custos: O CloudWatch pode ser utilizado para monitorar os custos da infraestrutura e identificar oportunidades de otimização.
   
-**Sustentabilidade:**
+**Sustentabilidade**
 
-- Eficiência energética: O Fargate é uma plataforma serverless que utiliza apenas os recursos computacionais necessários para executar os containers, reduzindo o consumo de energia.
+- Eficiência energética: O Fargate é uma plataforma serverless que utiliza apenas os recursos computacionais necessários para executar os conteinêres, reduzindo o consumo de energia.
 
 - Práticas sustentáveis: A AWS oferece diversas práticas sustentáveis para reduzir o impacto ambiental da infraestrutura, como a utilização de fontes renováveis de energia e a otimização da refrigeração de data centers.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-   # 
  
-### Valores
+## Valores
 
-[Estimativa da Nova Arquitetura](https://calculator.aws/#/estimate?id=ac4b05484def49f1053d80b5c2167dfc62498e20)
+![Custo infraestrutura](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Custo%20arquitetura.png)
+[Ver mais detalhes](https://calculator.aws/#/estimate?id=b01cde4e21b48acb8d9d7e39c42694d0838c1934)
 
 **Custos**
 
 |             Item                   |                     Descrição                      |       Preço      |
 |------------------------------------|----------------------------------------------------|----------------  |
-| Migração Para a AWS                | Migração de dados on-premise para a AWS            | $923,82          |
-| Infraestrutura da AWS              | Custo da Infraestrutura de serviços da AWS         | $/Mensal |
-| Custo da Equipe                    | Suporte e manutenção técnica                       | $/Mensal |
+| Migração de dados para a AWS       | Migração de dados on-premises para a AWS           | $108,77          |
+| Implementação                      | Custo da equipe de implementação                   | $5.585,79        |
+| Infraestrutura da AWS              | Custo mensal da Infraestrutura de serviços da AWS  | $1.107,16        |
 
-### Prazo de Entrega
+
+## Prazo de Entrega
 
 + Implementação da arquitetura: **28 dias úteis**.
 
@@ -219,6 +202,6 @@ Equipe de 3 pessoas:
   - Ao longo de 28 dias úteis
   - Total de 672 horas para a entrega
 
-### Cronograma Macro de Entregas
+## Cronograma Macro de Entregas
 
 ![Cronograma](https://github.com/zSalocin/PB_Compass_Projeto_Final_Arquitetura/blob/main/Assets/Cronograma.jpeg)
