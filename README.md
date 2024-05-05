@@ -8,7 +8,7 @@ O projeto tem como objetivo aumentar a escalabilidade e reduzir custos operacion
 - [Patrícia Moura](https://github.com/Tri3010)
 
 ### Caso
-A "Fast Engineering S/A" está em busca de uma solução por parte da empresa terceira "TI SOLUÇÕES INCRÍVEIS". O e-commerce da Fast Engineering S/A está experimentando um crescimento significativo e a solução atual não está mais conseguindo lidar com a alta demanda de acessos e compras que está enfrentando. Desde o início do ano, os acessos e as compras têm apresentado um aumento de 20% a cada mês.  
+A "Fast Engineering S/A" está em busca de uma solução por parte da empresa terceira "T.I SOLUÇÕES INCRÍVEIS". O e-commerce da Fast Engineering S/A está experimentando um crescimento significativo e a solução atual não está mais conseguindo lidar com a alta demanda de acessos e compras que está enfrentando. Desde o início do ano, os acessos e as compras têm apresentado um aumento de 20% a cada mês.  
 Neste contexto, a Fast Engineering S/A têm buscado formas de aumentar a disponibilidade, segurança, lidar com o aumento da demanda e reduzir custo com infraestrutura e gerenciamento de suas instalações do e-commerce. 
 
 **Requerimentos do Pedido**
@@ -51,7 +51,7 @@ O Amazon Route 53 é um serviço DNS que permite registrar e gerenciar domínios
 - Uso: A requisição do cliente é enviada para o Amazon Route 53, que direciona o tráfego para o CloudFront apropriado com base no tipo de conteúdo solicitado (conteúdo estático, frontend ou API).
 
 #### Amazon CloudFront  
-O Amazon CloudFront é um serviço de Content Delivery Network (CDN) oferecido pela AWS. Sua principal função é acelerar a entrega de conteúdo estático e dinâmico, como páginas web, imagens, vídeos, scripts e outros arquivos multimídia, aos usuários finais com baixa latência e alta disponibilidade.  
+O Amazon CloudFront é um serviço de Content Delivery Network (CDN) oferecido pela AWS. Sua principal função é acelerar a entrega de conteúdo estático e dinâmico, como páginas web, imagens, vídeos, scripts e outros arquivos multimídia aos usuários finais com baixa latência e alta disponibilidade.  
 - Uso: Se o conteúdo solicitado for estático (imagens, CSS, JavaScript), o CloudFront o recupera do S3 e o entrega diretamente ao cliente com baixa latência e alta disponibilidade.  
     Se o conteúdo solicitado for o frontend da aplicação web, o CloudFront o recupera do S3 e o entrega ao navegador do cliente.  
     Se o conteúdo solicitado for uma API, o CloudFront o direciona para o Application Load Balancer.
@@ -67,7 +67,7 @@ Essa configuração oferece a melhor proteção para sua aplicação web com o m
 
 #### Amazon VPC
 O Virtual Private Cloud isola a infraestrutura na nuvem e fornece controle granular sobre a rede, criando uma rede privada virtual. Cria uma rede VPC, melhorando o controle de tráfego e a segurança da infraestrutura.
-- Uso: Cria um ambiente de rede isolado e seguro na AWS, permitindo o controle granular do tráfego de rede e a segmentação de recursos. A VPC é dividida em subredes públicas e privadas, segregando recursos sensíveis (como bancos de dados) da internet pública.
+- Uso: Cria um ambiente de rede isolado e seguro na AWS, permitindo o controle granular do tráfego de rede e a segmentação de recursos. A VPC é dividida em sub-redes públicas e privadas, segregando recursos sensíveis (como bancos de dados) da internet pública.
 
 #### Amazon ALB
 Application Load Balancer é um serviço que distribui o tráfego entre várias instâncias ou recursos para garantir a alta disponibilidade e a escalabilidade de aplicativos.  
@@ -87,11 +87,11 @@ O Amazon RDS é um serviço de banco de dados relacional oferecido pela AWS. Ele
 
 #### NAT Gateway
 Um gateway NAT é um serviço de Network Address Translation (NAT – Conversão de endereços de rede). Você pode usar um gateway NAT para que as instâncias em uma sub-rede privada possam se conectar a serviços fora da VPC, mas os serviços externos não podem iniciar uma conexão com essas instâncias.
-- Uso: O NAT Gateway permite que os conteinêres do Fargate nas subnets privadas se comuniquem com a internet e com outros serviços da AWS de forma segura.
+- Uso: O NAT Gateway permite que os conteinêres do Fargate nas sub-redes privadas se comuniquem com a internet e com outros serviços da AWS de forma segura.
 
 #### Network ACL
 A Network Access Control List é uma lista com camadas adicionais de segurança que controlam o tráfego de entrada e saída de sub-redes em sua VPC.
-- Uso: Recurso de segurança que permite controlar o tráfego de entrada e saída das subnets dentro da VPC. 
+- Uso: Recurso de segurança que permite controlar o tráfego de entrada e saída das sub-redes dentro da VPC. 
 
 #### AWS IAM
 O AWS Identity and Access Management é um serviço que ajuda você a controlar o acesso aos recursos da AWS de forma segura. Com o IAM, é possível gerenciar, de maneira centralizada, permissões que controlam quais recursos da AWS os usuários poderão acessar. Você usa o IAM para controlar quem é autenticado (fez login) e autorizado (tem permissões) a usar os recursos.
@@ -149,7 +149,7 @@ A arquitetura proposta segue as melhores práticas e está de acordo com os pila
 
 - A configuração do AWS WAF protege contra ataques comuns da web, como injeções SQL, cross-site scripting (XSS) e DDoS. 
 
-- A segregação de subnets públicas e privadas, juntamente com a configuração adequada de grupos de segurança e ACLs de rede, ajuda a garantir que os recursos estejam protegidos contra acesso não autorizado.  
+- A segregação de sub-redes públicas e privadas, juntamente com a configuração adequada de grupos de segurança e ACLs de rede, ajuda a garantir que os recursos estejam protegidos contra acesso não autorizado.  
 
 **Confiabilidade** 
 
