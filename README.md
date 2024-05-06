@@ -8,7 +8,7 @@ O projeto tem como objetivo aumentar a escalabilidade e reduzir custos operacion
 - [Patrícia Moura](https://github.com/Tri3010)
 
 ### Caso
-A "Fast Engineering S/A" está em busca de uma solução por parte da empresa terceira "T.I SOLUÇÕES INCRÍVEIS". O e-commerce da Fast Engineering S/A está experimentando um crescimento significativo e a solução atual não está mais conseguindo lidar com a alta demanda de acessos e compras que está enfrentando. Desde o início do ano, os acessos e as compras têm apresentado um aumento de 20% a cada mês.  
+A "Fast Engineering S/A" está em busca de uma solução por parte da empresa terceira "T.I SOLUÇÕES INCRÍVEIS". O e-commerce da Fast Engineering S/A está experimentando um crescimento significativo e a solução atual não está mais conseguindo lidar com a alta demanda de acessos e compras que está enfrentando. Desde o início do ano os acessos e as compras têm apresentado um aumento de 20% a cada mês.
 Neste contexto, a Fast Engineering S/A têm buscado formas de aumentar a disponibilidade, segurança, lidar com o aumento da demanda e reduzir custo com infraestrutura e gerenciamento de suas instalações do e-commerce. 
 
 **Requerimentos do Pedido**
@@ -47,7 +47,7 @@ Quando planejamos a implantação na AWS, podemos nos beneficiar com a adoção 
 ### **Serviços Utilizados**
 
 #### Amazon Route 53 
-O Amazon Route 53 é um serviço DNS que permite registrar e gerenciar domínios, com roteamento de tráfego para recursos AWS, como ELB e CloudFront. Facilita o roteamento de tráfego eficiente e garante alta disponibilidade, direcionando acessos para instâncias e serviços AWS.  
+O Amazon Route 53 é um serviço DNS que permite registrar e gerenciar domínios com roteamento de tráfego para recursos AWS, como ELB e CloudFront. Facilita o roteamento de tráfego eficiente e garante alta disponibilidade, direcionando acessos para instâncias e serviços AWS.  
 - Uso: A requisição do cliente é enviada para o Amazon Route 53, que direciona o tráfego para o CloudFront apropriado com base no tipo de conteúdo solicitado (conteúdo estático, frontend ou API).
 
 #### Amazon CloudFront  
