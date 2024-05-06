@@ -163,7 +163,7 @@ A arquitetura proposta segue as melhores práticas e está de acordo com os pila
  
 **Eficiência de Desempenho**
 
-- O uso do Amazon CloudFront para distribuir conteúdo estático e otimizar a entrega de frontend e APIs melhora o desempenho do sistema, reduzindo a latência e melhorando a experiência do usuário. 
+- O uso do Amazon CloudFront para distribuir conteúdo estático e otimizar a entrega de frontend e APIs melhora o desempenho do sistema, reduzindo assim a latência e melhorando a experiência do usuário. 
 
 - O Application Load Balancer distribui o tráfego de forma inteligente entre várias instâncias do Amazon EKS, garantindo alta disponibilidade e desempenho.
 
@@ -175,7 +175,7 @@ A arquitetura proposta segue as melhores práticas e está de acordo com os pila
   
 **Sustentabilidade**
 
-- Eficiência energética: O Fargate é uma plataforma serverless que utiliza apenas os recursos computacionais necessários para executar os conteinêres, reduzindo o consumo de energia.
+- Eficiência energética: O Fargate é uma plataforma serverless que utiliza apenas recursos computacionais necessários para executar os conteinêres, reduzindo o consumo de energia.
 
 - Práticas sustentáveis: A AWS oferece diversas práticas sustentáveis para reduzir o impacto ambiental da infraestrutura, como a utilização de fontes renováveis de energia e a otimização da refrigeração de data centers.
  
