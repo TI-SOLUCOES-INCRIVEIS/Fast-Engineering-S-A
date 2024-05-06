@@ -73,6 +73,11 @@ O Virtual Private Cloud isola a infraestrutura na nuvem e fornece controle granu
 Application Load Balancer é um serviço que distribui o tráfego entre várias instâncias ou recursos para garantir a alta disponibilidade e a escalabilidade de aplicativos.  
 - Uso: O Application Load Balancer distribui o tráfego entre os clusters do EKS que executam o backend da aplicação web.
 
+
+### Elastic Container Registry
+O Amazon Elastic Container Registry (ECR) é um serviço totalmente gerenciado para armazenar e gerenciar imagens de contêiner Docker. Ele oferece uma maneira segura e confiável de armazenar e distribuir imagens de contêiner para seus aplicativos em execução na AWS ou em qualquer outro lugar.
+- Uso: O ECR é responsável por gerenciar as imagens que serão utilizadas pelos contêineres EKS dessa forma integrando e facilitando o processo de deploy de novas versões da aplicação.
+
 #### Amazon EKS
 O Elastic Kubernetes Service atua como a base da arquitetura, oferecendo orquestração de contêineres por meio do Kubernetes. Proporciona orquestração de contêineres escalável, permitindo a expansão dinâmica e alta disponibilidade da aplicação.
 - Uso: O EKS é responsável pelo gerenciamento do ciclo de vida dos conteinêres, incluindo provisionamento, escalonamento e reinicialização em caso de falhas.
