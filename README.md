@@ -5,7 +5,7 @@ O projeto tem como objetivo aumentar a escalabilidade e reduzir custos operacion
 #### Membros da Equipe:
 
 [![Gustavo Pinheiro](https://img.shields.io/badge/Gustavo%20Pinheiro-gray?style=flat-square&logo=github&logoColor=white&logoWidth=20&link=https://github.com/Gustavopnhro)](https://github.com/Gustavopnhro)
-[![Janaina Cordisco](https://img.shields.io/badge/Janaina%20Cordisco-gray?style=flat-square&logo=github&logoColor=white&logoWidth=20&link=https://github.com/JanainACordisco)](https://github.com/JanainACordisco)
+[![Janaina Cordisco](https://img.shields.io/badge/Janaina%20ACordisco-gray?style=flat-square&logo=github&logoColor=white&logoWidth=20&link=https://github.com/JanainaCordisco)](https://github.com/JanainaACordisco)
 [![Patrícia Moura](https://img.shields.io/badge/Patrícia%20Moura-gray?style=flat-square&logo=github&logoColor=white&logoWidth=20&link=https://github.com/Tri3010)](https://github.com/Tri3010)
 
 ### Caso
