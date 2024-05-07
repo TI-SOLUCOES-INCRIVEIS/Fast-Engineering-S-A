@@ -3,9 +3,12 @@
 O projeto tem como objetivo aumentar a escalabilidade e reduzir custos operacionais com a migração para a AWS Cloud de um e-commerce.
 
 #### Membros da Equipe:
-- [Gustavo Pinheiro](https://github.com/Gustavopnhro)
-- [Janaina Cordisco](https://github.com/JanainaACordisco)
-- [Patrícia Moura](https://github.com/Tri3010)
+
+[![Gustavo Pinheiro](https://img.shields.io/badge/Gustavo%20Pinheiro-gray?style=flat-square&logo=github&logoColor=white&logoWidth=20&link=https://github.com/Gustavopnhro)](https://github.com/Gustavopnhro)
+
+[![Janaina Cordisco](https://img.shields.io/badge/Janaina%20Cordisco-gray?style=flat-square&logo=github&logoColor=white&logoWidth=20&link=https://github.com/JanainACordisco)](https://github.com/JanainACordisco)
+
+[![Patrícia Moura](https://img.shields.io/badge/Patrícia%20Moura-gray?style=flat-square&logo=github&logoColor=white&logoWidth=20&link=https://github.com/Tri3010)](https://github.com/Tri3010)
 
 ### Caso
 A "Fast Engineering S/A" está em busca de uma solução por parte da empresa terceira "T.I SOLUÇÕES INCRÍVEIS". O e-commerce da Fast Engineering S/A está experimentando um crescimento significativo e a solução atual não está mais conseguindo lidar com a alta demanda de acessos e compras que está enfrentando. Desde o início do ano os acessos e as compras têm apresentado um aumento de 20% a cada mês.
