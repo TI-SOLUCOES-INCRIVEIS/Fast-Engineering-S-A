@@ -73,11 +73,6 @@ O Virtual Private Cloud isola a infraestrutura na nuvem e fornece controle granu
 Application Load Balancer é um serviço que distribui o tráfego entre várias instâncias ou recursos para garantir a alta disponibilidade e a escalabilidade de aplicativos.  
 - Uso: O Application Load Balancer distribui o tráfego entre os clusters do EKS que executam o backend da aplicação web.
 
-#### Amazon Backup
-O AWS Backup é um serviço totalmente gerenciado que facilita a centralização e a automatização da proteção de dados em todos os serviços da AWS, na nuvem e no local garantindo uma maior granularidade e controle em relação às políticas de backup.
-
-- Uso: O Amazon Backup será responsável pela garantia de políticas que estejam em total acordo com as normas de backup pré-estabelecidas pela empresa.  
-
 #### Amazon EKS
 O Elastic Kubernetes Service atua como a base da arquitetura, oferecendo orquestração de contêineres por meio do Kubernetes. Proporciona orquestração de contêineres escalável, permitindo a expansão dinâmica e alta disponibilidade da aplicação.
 - Uso: O EKS é responsável pelo gerenciamento do ciclo de vida dos conteinêres, incluindo provisionamento, escalonamento e reinicialização em caso de falhas.
@@ -110,7 +105,11 @@ O Amazon CloudWatch é um serviço de monitoramento dos recursos da AWS e as apl
 O AWS DMS é um serviço de replicação e migração gerenciado que ajuda a mover workloads analíticos e bancos de dados para a AWS rapidamente, de forma segura e com o mínimo possível de inatividade e zero perda de dados.
 - Uso: Permite migrar os dados do banco de dados on-premises para a AWS.
 
+#### Amazon Backup
+O AWS Backup é um serviço totalmente gerenciado que facilita a centralização e a automatização da proteção de dados em todos os serviços da AWS, na nuvem e no local garantindo uma maior granularidade e controle em relação às políticas de backup.
 
+- Uso: O Amazon Backup será responsável pela garantia de políticas que estejam em total acordo com as normas de backup pré-estabelecidas pela empresa.
+  
 ### Migração dos dados
 
 Propomos a migração segura e eficiente do servidor MySQL on-premises para o Amazon RDS na nuvem utilizando o AWS Database Migration Service (DMS). O DMS garante replicação contínua dos dados durante a migração, assegurando integridade e consistência. 
