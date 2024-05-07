@@ -101,15 +101,15 @@ O AWS Identity and Access Management é um serviço que ajuda você a controlar 
 O Amazon CloudWatch é um serviço de monitoramento dos recursos da AWS e as aplicações executadas na AWS em tempo real. Você pode usar o CloudWatch para coletar e monitorar métricas, que são as variáveis que é possível medir para avaliar seus recursos e suas aplicações.
 - Uso: Monitora a infraestrutura e a aplicação, fornecendo insights sobre desempenho, segurança e eventos, permitindo a prevenção, detecção e resolução rápida de problemas.
 
-#### AWS Database Migration Service
-O AWS DMS é um serviço de replicação e migração gerenciado que ajuda a mover workloads analíticos e bancos de dados para a AWS rapidamente, de forma segura e com o mínimo possível de inatividade e zero perda de dados.
-- Uso: Permite migrar os dados do banco de dados on-premises para a AWS.
-
 #### Amazon Backup
 O AWS Backup é um serviço totalmente gerenciado que facilita a centralização e a automatização da proteção de dados em todos os serviços da AWS, na nuvem e no local garantindo uma maior granularidade e controle em relação às políticas de backup.
 
 - Uso: O Amazon Backup será responsável pela garantia de políticas que estejam em total acordo com as normas de backup pré-estabelecidas pela empresa.
-  
+
+#### AWS Database Migration Service
+O AWS DMS é um serviço de replicação e migração gerenciado que ajuda a mover workloads analíticos e bancos de dados para a AWS rapidamente, de forma segura e com o mínimo possível de inatividade e zero perda de dados.
+- Uso: Permite migrar os dados do banco de dados on-premises para a AWS.
+
 ### Migração dos dados
 
 Propomos a migração segura e eficiente do servidor MySQL on-premises para o Amazon RDS na nuvem utilizando o AWS Database Migration Service (DMS). O DMS garante replicação contínua dos dados durante a migração, assegurando integridade e consistência. 
