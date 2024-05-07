@@ -73,6 +73,10 @@ O Virtual Private Cloud isola a infraestrutura na nuvem e fornece controle granu
 Application Load Balancer é um serviço que distribui o tráfego entre várias instâncias ou recursos para garantir a alta disponibilidade e a escalabilidade de aplicativos.  
 - Uso: O Application Load Balancer distribui o tráfego entre os clusters do EKS que executam o backend da aplicação web.
 
+#### Amazon Backup
+O AWS Backup é um serviço totalmente gerenciado que facilita a centralização e a automatização da proteção de dados em todos os serviços da AWS, na nuvem e no local garantindo uma maior granularidade e controle em relação às políticas de backup.
+
+- Uso: O Amazon Backup será responsável pela garantia de políticas que estejam em total acordo com as normas de backup pré-estabelecidas pela empresa.  
 
 #### Elastic Container Registry
 O Amazon Elastic Container Registry (ECR) é um serviço totalmente gerenciado para armazenar e gerenciar imagens de contêiner Docker. Ele oferece uma maneira segura e confiável de armazenar e distribuir imagens de contêiner para seus aplicativos em execução na AWS ou em qualquer outro lugar.
