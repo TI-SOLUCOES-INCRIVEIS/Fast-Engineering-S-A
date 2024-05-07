@@ -90,6 +90,10 @@ O Amazon RDS é um serviço de banco de dados relacional oferecido pela AWS. Ele
 Um gateway NAT é um serviço de Network Address Translation (NAT – Conversão de endereços de rede). Você pode usar um gateway NAT para que as instâncias em uma sub-rede privada possam se conectar a serviços fora da VPC, mas os serviços externos não podem iniciar uma conexão com essas instâncias.
 - Uso: O NAT Gateway permite que os conteinêres do Fargate nas sub-redes privadas se comuniquem com a internet e com outros serviços da AWS de forma segura.
 
+#### Internet Gateway
+Um gateway da Internet é um componente da VPC horizontalmente dimensionado, redundante e altamente disponível que permite a comunicação entre a VPC e a Internet. Ele oferece suporte para tráfego IPv4 e IPv6. Não causa riscos de disponibilidade ou restrições de largura de banda no tráfego de rede.
+- Uso: O Internet Gateway habilita recursos nas sub-redes públicas para estabelecer conexão com a Internet.
+
 #### Network ACL
 A Network Access Control List é uma lista com camadas adicionais de segurança que controlam o tráfego de entrada e saída de sub-redes em sua VPC.
 - Uso: Recurso de segurança que permite controlar o tráfego de entrada e saída das sub-redes dentro da VPC. 
