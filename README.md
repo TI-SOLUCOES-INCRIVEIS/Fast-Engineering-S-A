@@ -47,6 +47,10 @@ Quando planejamos a implantação na AWS, podemos nos beneficiar com a adoção 
 
 ### **Serviços Utilizados**
 
+#### Amazon Cognito
+O Amazon Cognito oferece um armazenamento de identidade que pode ser dimensionado para milhões de usuários, oferece suporte à federação de identidades sociais e corporativas e oferece recursos avançados de segurança para proteger seus consumidores e negócios. 
+- Uso: Com o Amazon Cognito, será possível adicionar recursos de inscrição e login de usuários e controlar o acesso às aplicações. 
+
 #### Amazon Route 53 
 O Amazon Route 53 é um serviço DNS que permite registrar e gerenciar domínios com roteamento de tráfego para recursos AWS, como ELB e CloudFront. Facilita o roteamento de tráfego eficiente e garante alta disponibilidade, direcionando acessos para instâncias e serviços AWS.  
 - Uso: A requisição do cliente é enviada para o Amazon Route 53, que direciona o tráfego para o CloudFront apropriado com base no tipo de conteúdo solicitado (conteúdo estático, frontend ou API).
