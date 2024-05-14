@@ -115,6 +115,12 @@ O AWS Backup é um serviço totalmente gerenciado que facilita a centralização
 
 - Uso: O Amazon Backup será responsável pela garantia de políticas que estejam em total acordo com as normas de backup pré-estabelecidas pela empresa.
 
+#### AWS Certificate Manager
+O Gerenciador de Certificados da AWS é uma ferramenta essencial para garantir a segurança e a confiabilidade da sua infraestrutura e aplicações na nuvem. Ele oferece uma solução centralizada para gerenciar todo o ciclo de vida dos seus certificados digitais, desde a solicitação e emissão até a renovação e revogação.
+
+- Uso: O AWS Certificate Manager será responsável pela guarda, garantia e segurança dos certificados digitais como SSL/TLS para garantir a comunicação criptografada de ponta a ponta utilizando o protocolo HTTPS.
+
+
 #### AWS Database Migration Service
 O AWS DMS é um serviço de replicação e migração gerenciado que ajuda a mover workloads analíticos e bancos de dados para a AWS rapidamente, de forma segura e com o mínimo possível de inatividade e zero perda de dados.
 - Uso: Permite migrar os dados do banco de dados on-premises para a AWS.
