@@ -43,7 +43,7 @@ Embora funcional para a operação básica da aplicação, recomenda-se aprimora
 
 Quando planejamos a implantação na AWS, podemos nos beneficiar com a adoção de serviços gerenciados que reduzem o esforço de tarefas operacionais que não agregam valor à estrutura da empresa, e nos permitem focar em melhorias dos serviços prestados aos clientes. Dessa forma, precisamos investir menos esforço para manter a infraestrutura e mais em entregar novas funcionalidades, garantindo que a aplicação se comporte de acordo com a expectativa dos usuários finais.
 
-![PROJECT_ARCHITECTURE](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Arquitetura%20Final.jpeg)
+![PROJECT_ARCHITECTURE](https://github.com/TI-SOLUCOES-INCRIVEIS/Fast-Engineering-S-A/blob/main/assets/Arquitetura%20Final.png)
 
 ### **Serviços Utilizados**
 
